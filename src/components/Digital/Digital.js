@@ -1,10 +1,10 @@
 import React from "react";
 
-const Ink = () => {
+const Digital = () => {
     return (
         <div>
-        <h1>Ink</h1>
+        <h1>Digital</h1>
         </div>
     );
     }
-export default Ink;
+export default Digital;
