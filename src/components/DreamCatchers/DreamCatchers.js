@@ -15,15 +15,15 @@ const DreamCatchers = () => {
 
     return (
         <div>
-        <h1>DreamCatchers</h1>
-        <div className="row">
+        <h1>This page has photos of Dream Catchers</h1>
+        {/* <div className="row">
             {data.data.attributes.collage.data.map(image => (
                 <div>
                     <img src={image.attributes.name} alt={image.alternativeText} />
         </div>
             ))}
            
-        </div>
+        </div> */}
         </div>
 
     );

@@ -3,7 +3,7 @@ import React from "react";
 const Circles = () => {
     return (
         <div>
-        <h1>Circles</h1>
+        <h1>This page shows photos of Circles in string art</h1>
         </div>
     );
     }

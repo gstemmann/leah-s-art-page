@@ -15,15 +15,15 @@ const About = () => {
 
     return (
         <div>
-        <h1>About</h1>
-        <div className="row">
+        <h1>This page renders the About page</h1>
+        {/* <div className="row">
             {data.data.attributes.collage.data.map(image => (
                 <div>
                     <img src={image.attributes.name} alt={image.alternativeText} />
         </div>
             ))}
            
-        </div>
+        </div> */}
         </div>
 
     );

@@ -1,4 +1,6 @@
 import React from "react";
+
+import { Link } from "react-router-dom";
 import useFetch from "../../hooks/useFetch";
 import { Row, Col, Container } from "react-bootstrap";
 // import test_photo from "../../assets/images/Home/test_photo.png";
@@ -18,6 +20,15 @@ const Home = () => {
 
     return (
         <div>
+            <div>
+                <Link to="/string">StringArt</Link>
+                <br></br>
+                <Link to="/prints">Printmaking</Link>
+                <br></br>
+                <Link to="/twod">TwoD</Link>
+
+                
+            </div>
 
             <Row className="p-5" >
                 <Col className="text-center">
