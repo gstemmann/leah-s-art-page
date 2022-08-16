@@ -3,7 +3,7 @@ import React from "react";
 const Ink = () => {
     return (
         <div>
-        <h1>Ink</h1>
+        <h1>This page shows photos of Ink</h1>
         </div>
     );
     }

@@ -1,16 +1,16 @@
 import React from "react";
-import useFetch from "../../hooks/useFetch";
+// import useFetch from "../../hooks/useFetch";
 
 const About = () => {
-    const { data, loading, error } = useFetch("http://localhost:1337/api/image?populate[2]=collage");
-    console.log(data)
+    // const { data, loading, error } = useFetch("http://localhost:1337/api/image?populate[2]=collage");
+    // console.log(data)
 
-    if (loading) {
-        return <div>Loading...</div>;
-    }
-    if(error) {
-        return <div>Error</div>;
-    }
+    // if (loading) {
+    //     return <div>Loading...</div>;
+    // }
+    // if(error) {
+    //     return <div>Error</div>;
+    // }
 
 
     return (
