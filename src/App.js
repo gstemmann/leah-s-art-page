@@ -1,5 +1,3 @@
-
-
 import { Route, Routes } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -25,6 +23,7 @@ import Contact from "./components/Contact/Contact";
 import CV from "./components/CV/CV";
 
 import NavBar from "./components/NavBar/NavBar";
+import Footer from "./components/Footer/Footer";
 // import { Nav } from "react-bootstrap";
 
 
@@ -55,6 +54,7 @@ function App() {
         <Route path="/contact" element={<Contact/>}/>
         <Route path="/cv" element={<CV/>}/>
       </Routes>
+      <Footer />
      
     </div>
   );

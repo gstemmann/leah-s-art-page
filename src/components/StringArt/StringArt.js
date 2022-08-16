@@ -1,12 +1,9 @@
 import React from "react";
 import { Row, Col, Container, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
-
-import Circles from "../Circles/Circles";
-import Tessellations from "../Tessellations/Tessellations";
-import DreamCatchers from "../DreamCatchers/DreamCatchers";
-import MixedMedia from "../MixedMedia/MixedMedia";
 import home_photo from "../../assets/images/Home/home_photo.webp";
+
+
 
 
 const StringArt = () => {

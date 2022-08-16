@@ -39,20 +39,20 @@ const Home = () => {
 
             <Container className="container-fluid">
                 <Row className="p-5">
-                <Col>
-                <Button variant="light"> <Link to="/string">StringArt </Link> </Button>
-                        <img className="img-fluid"  src={home_photo} alt={"test_photo"}/>
-                    </Col>
-                
-                    <Col>
-                    <Button variant="light"><Link to="/prints">Printmaking</Link> </Button>
-                        <img className="img-fluid"  src={home_photo} alt={"test_photo"}/>
-                    </Col>
+                        <Col>
+                        <Button variant="light"> <Link to="/string">StringArt</Link> </Button>
+                                <img className="img-fluid"  src={home_photo} alt={"test_photo"}/>
+                        </Col>
+                    
+                        <Col>
+                            <Button variant="light"><Link to="/prints">Printmaking</Link> </Button>
+                                <img className="img-fluid"  src={home_photo} alt={"test_photo"}/>
+                        </Col>
 
-                    <Col>
-                    <Button variant="light"><Link to="/twod">TwoD</Link></Button>
-                        <img className="img-fluid"  src={home_photo} alt={"test_photo"}/>
-                    </Col>
+                        <Col>
+                            <Button variant="light"><Link to="/twod">TwoD</Link></Button>
+                                <img className="img-fluid"  src={home_photo} alt={"test_photo"}/>
+                        </Col>
                 </Row>
                 
             </Container>
