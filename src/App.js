@@ -3,6 +3,7 @@
 import { Route, Routes } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+
 import Home from "./components/Home/Home";
 import StringArt from "./components/StringArt/StringArt";
 import Circles from "./components/Circles/Circles";
@@ -24,7 +25,7 @@ import Contact from "./components/Contact/Contact";
 import CV from "./components/CV/CV";
 
 import NavBar from "./components/NavBar/NavBar";
-import { Nav } from "react-bootstrap";
+// import { Nav } from "react-bootstrap";
 
 
 
@@ -48,7 +49,6 @@ function App() {
         <Route path="/twod" element={<TwoD/>}/>
           <Route path="/ink" element={<Ink/>}/>
           <Route path="/watercolor" element={<WaterColor/>}/>
-
         <Route path="/threed" element={<ThreeD/>}/>
         <Route path="/digital" element={<Digital/>}/>
         <Route path="/about" element={<About/>}/>
