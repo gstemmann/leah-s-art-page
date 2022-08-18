@@ -1,21 +1,24 @@
 import React from "react";
 
 import { Link } from "react-router-dom";
-// import useFetch from "../../hooks/useFetch";
+import useFetch from "../../hooks/useFetch";
 import { Row, Col, Container, Button } from "react-bootstrap";
 // import test_photo from "../../assets/images/Home/test_photo.png";
 import home_photo from "../../assets/images/Home/home_photo.webp";
 
-const Home = () => {
-    // const { data, loading, error } = useFetch("http://localhost:1337/api/image?populate[2]=collage");
-    // console.log(data)
+const test_photo_path = "/home/george/art-page-backend/public/uploads/rs_w_1280_h_1406_6bd0def5cc.png"
+const base_backend_url = "home/george/art-page-backend/public"
 
-    // if (loading) {
-    //     return <div>Loading...</div>;
-    // }
-    // if(error) {
-    //     return <div>Error</div>;
-    // }
+const Home = () => {
+    const { data, loading, error } = useFetch("http://localhost:1337/api/image/?populate=%2A");
+    console.log(data)
+
+    if (loading) {
+        return <div>Loading...</div>;
+    }
+    if(error) {
+        return <div>Error</div>;
+    }
 
 
     return (
@@ -51,24 +54,20 @@ const Home = () => {
 
                         <Col>
                             <Button variant="light"><Link to="/twod">TwoD</Link></Button>
-                                <img className="img-fluid"  src={home_photo} alt={"test_photo"}/>
+
+                                <img className="img-fluid" 
+                                src={data.data.attributes.collage.data[0].attributes.url} 
+                                alt="test_photo">
+                                </img>
+                                
+                                {/* <img className="img-fluid"
+                                src={data.data.attributes.collage.data[0].attributes.name}
+                                alt={"test_photo"}/> */}
                         </Col>
                 </Row>
                 
             </Container>
-            
-        {/* <div className="row">
-            {data.data.attributes.collage.data.map(image => (
-                <div key={image}>
-                    <img src={image.attributes.name} alt={image.alternativeText} />
-        </div>
-            ))}
-        </div> */}
-
-        {/* <div className="row">
-          <p>  {data.data.attributes.texteeeeeeeeeee} </p>
-
-        </div> */}
+        
         </div>
 
     );

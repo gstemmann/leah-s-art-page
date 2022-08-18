@@ -54,7 +54,7 @@ function App() {
         <Route path="/contact" element={<Contact/>}/>
         <Route path="/cv" element={<CV/>}/>
       </Routes>
-      <Footer />
+      {/* <Footer /> */}
      
     </div>
   );
