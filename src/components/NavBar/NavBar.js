@@ -11,6 +11,7 @@ const NavBar = () => {
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
               <Nav className="ms-auto justify-content-end" defaultActiveKey="#home">
+                <Nav.Link href="/">Home</Nav.Link>
                     <NavDropdown title="String Art" id="basic-nav-dropdown">
                         <NavDropdown.Item href="/circles">Circles</NavDropdown.Item>
                         <NavDropdown.Item href="/tessellations">Tesselations</NavDropdown.Item>

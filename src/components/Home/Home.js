@@ -1,16 +1,15 @@
 import React from "react";
-
 import { Link } from "react-router-dom";
 import useFetch from "../../hooks/useFetch";
 import { Row, Col, Container, Button } from "react-bootstrap";
-// import test_photo from "../../assets/images/Home/test_photo.png";
 import home_photo from "../../assets/images/Home/home_photo.webp";
 
-const test_photo_path = "/home/george/art-page-backend/public/uploads/rs_w_1280_h_1406_6bd0def5cc.png"
-const base_backend_url = "home/george/art-page-backend/public"
+
+const BASE_URL = 'http://localhost:1337'
 
 const Home = () => {
-    const { data, loading, error } = useFetch("http://localhost:1337/api/image/?populate=%2A");
+
+    const { data, loading, error } = useFetch(`${BASE_URL}/api/image/?populate=%2A`);
     console.log(data)
 
     if (loading) {
@@ -23,8 +22,6 @@ const Home = () => {
 
     return (
         <div>
-       
-
             <Row className="p-5" >
                 <Col className="text-center">
                     <img className="img-fluid"  src={home_photo} alt={"test_photo"}/>
@@ -44,26 +41,26 @@ const Home = () => {
                 <Row className="p-5">
                         <Col>
                         <Button variant="light"> <Link to="/string">StringArt</Link> </Button>
-                                <img className="img-fluid"  src={home_photo} alt={"test_photo"}/>
+                                <img className="img-fluid"  
+                                src={BASE_URL + data.data.attributes.string_art_tessellations.data[10].attributes.url} 
+                                alt={"test_photo"}/>
                         </Col>
                     
                         <Col>
                             <Button variant="light"><Link to="/prints">Printmaking</Link> </Button>
-                                <img className="img-fluid"  src={home_photo} alt={"test_photo"}/>
+                            <img className="img-fluid"  
+                            src={BASE_URL + data.data.attributes.prints_lithographs.data[0].attributes.url} 
+                            alt={"test_photo"}/>
                         </Col>
 
                         <Col>
-                            <Button variant="light"><Link to="/twod">TwoD</Link></Button>
-
+                            <Button variant="light"><Link to="/twod">2D</Link></Button>
                                 <img className="img-fluid" 
-                                src={data.data.attributes.collage.data[0].attributes.url} 
+                                src={BASE_URL + data.data.attributes.two_d_ink.data[1].attributes.url} 
                                 alt="test_photo">
                                 </img>
-                                
-                                {/* <img className="img-fluid"
-                                src={data.data.attributes.collage.data[0].attributes.name}
-                                alt={"test_photo"}/> */}
                         </Col>
+
                 </Row>
                 
             </Container>
