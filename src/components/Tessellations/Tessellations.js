@@ -1,6 +1,6 @@
 import React from "react";
 import useFetch from "../../hooks/useFetch";
-import { Row, Col, Container, Button } from "react-bootstrap";
+import { Row, Col, Container } from "react-bootstrap";
 
 
 const BASE_URL = 'http://localhost:1337'
@@ -21,11 +21,21 @@ const Tessellations = () => {
     return (
         <div>
             <div>
-            
+                <Container className="container-fluid">
+                <h1>tessellations</h1>
+                </Container>
             <Container className="container-fluid">
+
                 <Row className="p-5">
-                    <Col className="align-self-center">
-                    <h1>tessellations</h1>
+                
+                    <Col className="sm align-self-center" >
+
+                    <img className="img-fluid rounded-circle" 
+                        src={BASE_URL + data.data.attributes.string_art_tessellations.data[9].attributes.url} 
+                        alt="test_photo">
+                        </img>
+                    </Col>
+                    <Col className="sm align-self-center">
                         <p>
                             the Oxford English Dictionary defines a tessellation as, " 
                             an arrangement of shapes closely fitted together in a repeated pattern without gaps or overlapping."
@@ -36,11 +46,6 @@ const Tessellations = () => {
                             we see very close similarities and, in some cases, mirroring measurements that unite these sacred patterns.
                         </p>
                     </Col>
-                    <img className="img-fluid" 
-                                src={BASE_URL + data.data.attributes.string_art_tessellations.data[9].attributes.url} 
-                                alt="test_photo">
-                                </img>
-                  
                 </Row>  
             </Container>
         

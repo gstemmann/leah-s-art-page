@@ -20,9 +20,9 @@ const ThreeD = () => {
 
     return (
         <div>
-            <Container className="container-fluid">
-                <Row className="p-5">
-                    <Col className="align-self-center">
+            <Container>
+                <Row>
+                    <Col className="text-center">
                         <h1>3D</h1>
                     </Col>
                 </Row>

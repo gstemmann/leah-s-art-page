@@ -1,6 +1,6 @@
 import React from "react";
 import useFetch from "../../hooks/useFetch";
-import { Row, Col, Container, Button } from "react-bootstrap";
+import { Row, Col, Container } from "react-bootstrap";
 
 const BASE_URL = 'http://localhost:1337'
 
@@ -23,12 +23,6 @@ const DreamCatchers = () => {
                 <Row className="p-5">
                     <Col className="align-self-left">
                         <h1>dreamcatchers</h1>
-                        <p>
-                        Leah began making string art in 2016. 
-                        What started out as a fun hobby with friends has grown into a true labor of love.
-                        below you will notice four different categories of string art. 
-                        Click on them to learn more about what makes them distinct.
-                        </p>
                     </Col>
                 </Row>
             </Container>

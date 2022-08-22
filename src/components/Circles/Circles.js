@@ -1,8 +1,7 @@
 import React from "react";
 import useFetch from "../../hooks/useFetch";
-import { Row, Col, Container, Button } from "react-bootstrap";
-import first_circle from "../../assets/images/StringArt/Circles/first_circle.webp";
-import home_photo from "../../assets/images/Home/home_photo.webp";
+import { Row, Col, Container } from "react-bootstrap";
+
 
 const BASE_URL = 'http://localhost:1337'
 
@@ -33,7 +32,8 @@ const Circles = () => {
                         </p>
                     </Col>
                     <Col>
-                        <img className="img-fluid" src={first_circle}></img>
+                        <img className="rounded-circle img-fluid" 
+                        src={BASE_URL + data.data.attributes.string_art_circles.data[10].attributes.url} alt="first circle pic"></img>
                     </Col>
                  
                 </Row>  

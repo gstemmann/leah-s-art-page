@@ -1,7 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import useFetch from "../../hooks/useFetch";
-import { Row, Col, Container, Button } from "react-bootstrap";
+import { Row, Col, Container, Button, Card } from "react-bootstrap";
 
 
 const BASE_URL = 'http://localhost:1337'
@@ -20,33 +19,60 @@ const Printmaking = () => {
 
     return (
         <div>
-            <Container className="container-fluid">
+            <Container>
                 <Row>
                     <Col>
-                        <Button variant="light"> <Link to="/relief">Relief</Link></Button>
-                            <img className="img-fluid"  
-                            src={BASE_URL + data.data.attributes.prints_relief.data[0].attributes.url} 
-                            alt={"test_photo"}/>
+                    <Card className="text-center">
+                           
+                           <Card.Img className="img-fluid"  
+                                   src={BASE_URL + data.data.attributes.prints_relief.data[0].attributes.url} 
+                                   alt={"test_photo"}/>
+                           <Card.ImgOverlay>
+                                       <Button variant="danger" href="/relief">Relief
+                                       </Button>
+                           </Card.ImgOverlay>
+                           
+                       </Card>
 
-                        <Button variant="light"><Link to="/leafprints">Leaf Prints</Link></Button>
-                            <img className="img-fluid"  
-                            src={BASE_URL + data.data.attributes.prints_leaf.data[2].attributes.url} 
-                            alt={"test_photo"}/>
+                       <Card className="text-center">
+                           
+                           <Card.Img className="img-fluid"  
+                                   src={BASE_URL + data.data.attributes.prints_leaf.data[0].attributes.url} 
+                                   alt={"test_photo"}/>
+                           <Card.ImgOverlay>
+                                       <Button variant="danger" href="/leafprints">Leaf Prints
+                                       </Button>
+                           </Card.ImgOverlay>
+                           
+                       </Card>
                     
                         
                         </Col>
 
                         <Col>
-                        <Button variant="light"><Link to="/intaglio">Intaglio</Link> </Button>
-                            <img className="img-fluid"  
-                            src={BASE_URL + data.data.attributes.prints_intaglio.data[1].attributes.url} 
-                            alt={"test_photo"}/>
+                        <Card className="text-center">
+                           
+                                <Card.Img className="img-fluid"  
+                                        src={BASE_URL + data.data.attributes.prints_intaglio.data[1].attributes.url} 
+                                        alt={"test_photo"}/>
+                                <Card.ImgOverlay>
+                                            <Button variant="danger" href="/intaglio">Intaglio
+                                            </Button>
+                                </Card.ImgOverlay>
+                                
+                            </Card>
                         
-                        
-                        <Button variant="light"><Link to="/lithographs">Lithographs</Link></Button>
-                            <img className="img-fluid"  
-                            src={BASE_URL + data.data.attributes.prints_lithographs.data[0].attributes.url} 
-                            alt={"test_photo"}/>
+                            <Card className="text-center">
+                           
+                           <Card.Img className="img-fluid"  
+                                   src={BASE_URL + data.data.attributes.prints_lithographs.data[0].attributes.url} 
+                                   alt={"test_photo"}/>
+                           <Card.ImgOverlay>
+                                       <Button variant="danger" href="/lithographs">Lithographs
+                                       </Button>
+                           </Card.ImgOverlay>
+                           
+                       </Card>
                     </Col>
                 </Row>
                 

@@ -1,7 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import useFetch from "../../hooks/useFetch";
-import { Row, Col, Container, Button } from "react-bootstrap";
+import { Row, Col, Container, Button, Card } from "react-bootstrap";
 
 
 const BASE_URL = 'http://localhost:1337'
@@ -20,6 +19,7 @@ const StringArt = () => {
     
     return (
         <div>
+            <Container className="text-end">
             <h1>StringArt</h1>   
                 <p>
                     Leah began making string art in 2016. 
@@ -27,32 +27,55 @@ const StringArt = () => {
                     below you will notice four different categories of string art. 
                     Click on them to learn more about what makes them distinct.
                 </p>
-    
+                <br></br>
+                <br></br>
+                <br></br>
+            </Container>
         <Container className="container-fluid">
                 <Row>
                     <Col>
-                        <Button variant="light"> <Link to="/circles">Circles</Link> </Button>
-                            <img className="img-fluid"  
-                            src={BASE_URL + data.data.attributes.string_art_circles.data[1].attributes.url} 
-                            alt={"test_photo"}/>
-                    
-                        <Button variant="light"><Link to="/dreamcatchers">DreamCatchers</Link> </Button>
-                            <img className="img-fluid"  
-                            src={BASE_URL + data.data.attributes.string_art_dreamcatchers.data[1].attributes.url} 
-                            alt={"test_photo"}/>
+                        <Card className="text-center">
+                            
+                                <Card.Img className="img-fluid"  
+                                        src={BASE_URL + data.data.attributes.string_art_circles.data[1].attributes.url} 
+                                        alt={"test_photo"}/>
+                                <Card.ImgOverlay>
+                                            <Button variant="danger" href="/circles">Circles
+                                            </Button>
+                                </Card.ImgOverlay>
+                        </Card>
+                        <Card className="text-center">
+                                <Card.Img className="img-fluid"  
+                                        src={BASE_URL + data.data.attributes.string_art_dreamcatchers.data[1].attributes.url} 
+                                        alt={"test_photo"}/>
+                                <Card.ImgOverlay>
+                                            <Button variant="danger" href="/dreamcatchers">Dreamcatchers
+                                            </Button>
+                                </Card.ImgOverlay>
+                        </Card>
                     </Col>
 
 
                     <Col>
-                        <Button variant="light"><Link to="/tessellations">Tessellations</Link></Button>
-                            <img className="img-fluid"  
-                            src={BASE_URL + data.data.attributes.string_art_tessellations.data[5].attributes.url} 
-                            alt={"test_photo"}/>
+                    <Card className="text-center">
+                                <Card.Img className="img-fluid"  
+                                        src={BASE_URL + data.data.attributes.string_art_tessellations.data[1].attributes.url} 
+                                        alt={"test_photo"}/>
+                                <Card.ImgOverlay>
+                                            <Button variant="danger" href="/tessellations">Tessellations
+                                            </Button>
+                                </Card.ImgOverlay>
+                        </Card>
                         
-                        <Button variant="light"><Link to="/mixed">Mixed Media</Link></Button>
-                            <img className="img-fluid"  
-                            src={BASE_URL + data.data.attributes.string_art_mixed_media.data[7].attributes.url} 
-                            alt={"test_photo"}/>
+                        <Card className="text-center">
+                                <Card.Img className="img-fluid"  
+                                        src={BASE_URL + data.data.attributes.string_art_mixed_media.data[1].attributes.url} 
+                                        alt={"test_photo"}/>
+                                <Card.ImgOverlay>
+                                            <Button variant="danger" href="/mixed">Mixed Media
+                                            </Button>
+                                </Card.ImgOverlay>
+                        </Card>
                     </Col>
                 </Row>
                 

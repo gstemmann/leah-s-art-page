@@ -1,7 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import useFetch from "../../hooks/useFetch";
-import { Row, Col, Container, Button } from "react-bootstrap";
+import { Row, Col, Container, Button, Card } from "react-bootstrap";
 import home_photo from "../../assets/images/Home/home_photo.webp";
 
 
@@ -40,25 +39,47 @@ const Home = () => {
             <Container className="container-fluid">
                 <Row className="p-5">
                         <Col>
-                        <Button variant="light"> <Link to="/string">StringArt</Link> </Button>
-                                <img className="img-fluid"  
-                                src={BASE_URL + data.data.attributes.string_art_tessellations.data[10].attributes.url} 
-                                alt={"test_photo"}/>
-                        </Col>
-                    
-                        <Col>
-                            <Button variant="light"><Link to="/prints">Printmaking</Link> </Button>
-                            <img className="img-fluid"  
-                            src={BASE_URL + data.data.attributes.prints_lithographs.data[0].attributes.url} 
-                            alt={"test_photo"}/>
+                            <Card className="text-center">
+                           
+                                <Card.Img className="img-fluid"  
+                                        src={BASE_URL + data.data.attributes.string_art_tessellations.data[10].attributes.url} 
+                                        alt={"test_photo"}/>
+                                <Card.ImgOverlay>
+                                            <Button variant="danger" href="/string">StringArt
+                                            </Button>
+                                </Card.ImgOverlay>
+                                
+                            </Card>
                         </Col>
 
+
                         <Col>
-                            <Button variant="light"><Link to="/twod">2D</Link></Button>
-                                <img className="img-fluid" 
-                                src={BASE_URL + data.data.attributes.two_d_ink.data[1].attributes.url} 
-                                alt="test_photo">
-                                </img>
+                            <Card className="text-center">
+                           
+                                <Card.Img className="img-fluid"  
+                                        src={BASE_URL + data.data.attributes.prints_relief.data[3].attributes.url} 
+                                        alt={"test_photo"}/>
+                                <Card.ImgOverlay>
+                                            <Button variant="danger" href="/prints">Printmaking
+                                            </Button>
+                                </Card.ImgOverlay>
+                                
+                            </Card>
+                        </Col>
+
+
+                        <Col>
+                            <Card className="text-center">
+                           
+                                <Card.Img className="img-fluid"  
+                                        src={BASE_URL + data.data.attributes.two_d_ink.data[1].attributes.url} 
+                                        alt={"test_photo"}/>
+                                <Card.ImgOverlay>
+                                            <Button variant="danger" href="/twoD">2D
+                                            </Button>
+                                </Card.ImgOverlay>
+                                
+                            </Card>
                         </Col>
 
                 </Row>

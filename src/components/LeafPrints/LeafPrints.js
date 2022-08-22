@@ -21,7 +21,9 @@ const LeafPrints = () => {
             <Container className="container-fluid">
                 <Row className="p-5">
                     <Col className="align-self-center">
-                        <h1>leaf Prints</h1>
+                        <p>Leaf Prints are taken from real leaves. They are made by rolling one side of the Leaf
+                            with Gamblin relied ink, then stamping them onto paper and burnishing them until a legible print is revealed.
+                        </p>
                     </Col>
                 </Row>
             </Container>
