@@ -17,9 +17,11 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "build": "react-scripts build",
+    "pre-deploy": "cp build/index.html build/200.html",
+    "deploy": "surge build --domain lstemmann.surge.sh"
   },
   "eslintConfig": {
     "extends": [

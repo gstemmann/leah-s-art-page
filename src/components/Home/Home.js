@@ -4,12 +4,15 @@ import { Row, Col, Container, Button, Card } from "react-bootstrap";
 import home_photo from "../../assets/images/Home/home_photo.webp";
 
 
-const BASE_URL = 'http://localhost:1337'
+
+// const BASE_URL = "http://localhost:3001"
+
+const BASE_URL = "https://lstemmann-art-page.herokuapp.com"
 
 const Home = () => {
 
     const { data, loading, error } = useFetch(`${BASE_URL}/api/image/?populate=%2A`);
-    console.log(data)
+    // console.log(data)
 
     if (loading) {
         return <div>Loading...</div>;
@@ -19,7 +22,11 @@ const Home = () => {
     }
 
 
+    const { string_art_circles, prints_relief, two_d_ink } = data.data.attributes
+    console.log(string_art_circles)   
     return (
+        
+
         <div>
             <Row className="p-5" >
                 <Col className="text-center">
@@ -42,7 +49,7 @@ const Home = () => {
                             <Card className="text-center">
                            
                                 <Card.Img className="img-fluid"  
-                                        src={BASE_URL + data.data.attributes.string_art_tessellations.data[10].attributes.url} 
+                                        src={string_art_circles.data[0].attributes.url} 
                                         alt={"test_photo"}/>
                                 <Card.ImgOverlay>
                                             <Button variant="danger" href="/string">StringArt
@@ -57,7 +64,7 @@ const Home = () => {
                             <Card className="text-center">
                            
                                 <Card.Img className="img-fluid"  
-                                        src={BASE_URL + data.data.attributes.prints_relief.data[3].attributes.url} 
+                                        src={prints_relief.data[3].attributes.url} 
                                         alt={"test_photo"}/>
                                 <Card.ImgOverlay>
                                             <Button variant="danger" href="/prints">Printmaking
@@ -72,7 +79,7 @@ const Home = () => {
                             <Card className="text-center">
                            
                                 <Card.Img className="img-fluid"  
-                                        src={BASE_URL + data.data.attributes.two_d_ink.data[1].attributes.url} 
+                                        src={two_d_ink.data[1].attributes.url} 
                                         alt={"test_photo"}/>
                                 <Card.ImgOverlay>
                                             <Button variant="danger" href="/twoD">2D
