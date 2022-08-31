@@ -21,9 +21,9 @@ const Home = () => {
         return <div>Error</div>;
     }
 
-
     const { string_art_circles, prints_relief, two_d_ink } = data.data.attributes
     console.log(string_art_circles)   
+    
     return (
         
 

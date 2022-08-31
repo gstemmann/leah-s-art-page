@@ -3,9 +3,10 @@ import { Link } from "react-router-dom";
 import useFetch from "../../hooks/useFetch";
 import { Row, Col, Container } from "react-bootstrap";
 
+const BASE_URL = "https://lstemmann-art-page.herokuapp.com"
+
 const About = () => {
-    const { data, loading, error } = useFetch("http://localhost:1337/api/image?populate[2]=collage");
-    console.log(data)
+    const { data, loading, error } = useFetch(`${BASE_URL}/api/image/?populate=%2A`);
 
     if (loading) {
         return <div>Loading...</div>;
@@ -14,6 +15,7 @@ const About = () => {
         return <div>Error</div>;
     }
 
+    const { string_art_mixed_media } = data.data.attributes
 
     return (
         <div>
@@ -35,7 +37,11 @@ const About = () => {
                     </p>
                 </Col>
                 <Col>
-                    <p>(video goes here)</p>
+                <img className="img-fluid rounded-circle" 
+                        src={string_art_mixed_media.data[5].attributes.url} 
+                        alt="test_photo">
+                        </img>
+
                 </Col>
             </Row>
         </Container>

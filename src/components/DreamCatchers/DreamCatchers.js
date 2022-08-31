@@ -2,7 +2,7 @@ import React from "react";
 import useFetch from "../../hooks/useFetch";
 import { Row, Col, Container } from "react-bootstrap";
 
-const BASE_URL = 'http://localhost:1337'
+const BASE_URL = "https://lstemmann-art-page.herokuapp.com"
 
 const DreamCatchers = () => {
 
@@ -15,6 +15,8 @@ const DreamCatchers = () => {
     if(error) {
         return <div>Error</div>;
     }
+
+    const { string_art_dreamcatchers } = data.data.attributes
 
 
     return (
@@ -31,12 +33,12 @@ const DreamCatchers = () => {
                 <Row className="p-5">
                         <Col>
                         <img className="img-fluid" 
-                                src={BASE_URL + data.data.attributes.string_art_dreamcatchers.data[0].attributes.url} 
+                                src={string_art_dreamcatchers.data[0].attributes.url} 
                                 alt="test_photo">
                                 </img>
 
                                 <img className="img-fluid" 
-                                src={BASE_URL + data.data.attributes.string_art_dreamcatchers.data[1].attributes.url} 
+                                src={string_art_dreamcatchers.data[1].attributes.url} 
                                 alt="test_photo">
                                 </img>
                         </Col>

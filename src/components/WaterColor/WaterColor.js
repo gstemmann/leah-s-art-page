@@ -2,7 +2,7 @@ import React from "react";
 import useFetch from "../../hooks/useFetch";
 import { Row, Col, Container } from "react-bootstrap";
 
-const BASE_URL = 'http://localhost:1337'
+const BASE_URL = "https://lstemmann-art-page.herokuapp.com"
 
 const WaterColor = () => {
 
@@ -15,6 +15,8 @@ const WaterColor = () => {
     if(error) {
         return <div>Error</div>;
     }
+
+    const {two_d_water_color} = data.data.attributes
 
     return (
         <div>
@@ -30,37 +32,37 @@ const WaterColor = () => {
                 <Row className="p-5">
                         <Col>
                             <img className="img-fluid" 
-                            src={BASE_URL + data.data.attributes.two_d_water_color.data[0].attributes.url} 
+                            src={two_d_water_color.data[0].attributes.url} 
                             alt="test_photo">
                             </img>
 
                             <img className="img-fluid" 
-                            src={BASE_URL + data.data.attributes.two_d_water_color.data[1].attributes.url} 
+                            src={two_d_water_color.data[1].attributes.url} 
                             alt="test_photo">
                             </img>
 
                             <img className="img-fluid" 
-                            src={BASE_URL + data.data.attributes.two_d_water_color.data[2].attributes.url} 
+                            src={two_d_water_color.data[2].attributes.url} 
                             alt="test_photo">
                             </img>
 
                             <img className="img-fluid" 
-                            src={BASE_URL + data.data.attributes.two_d_water_color.data[3].attributes.url} 
+                            src={two_d_water_color.data[3].attributes.url} 
                             alt="test_photo">
                             </img>
 
                             <img className="img-fluid" 
-                            src={BASE_URL + data.data.attributes.two_d_water_color.data[4].attributes.url} 
+                            src={two_d_water_color.data[4].attributes.url} 
                             alt="test_photo">
                             </img>
 
                             <img className="img-fluid" 
-                            src={BASE_URL + data.data.attributes.two_d_water_color.data[5].attributes.url} 
+                            src={two_d_water_color.data[5].attributes.url} 
                             alt="test_photo">
                             </img>
 
                             <img className="img-fluid" 
-                            src={BASE_URL + data.data.attributes.two_d_water_color.data[6].attributes.url} 
+                            src={two_d_water_color.data[6].attributes.url} 
                             alt="test_photo">
                             </img>
 

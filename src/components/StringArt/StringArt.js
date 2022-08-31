@@ -3,7 +3,7 @@ import useFetch from "../../hooks/useFetch";
 import { Row, Col, Container, Button, Card } from "react-bootstrap";
 
 
-const BASE_URL = 'http://localhost:1337'
+const BASE_URL = "https://lstemmann-art-page.herokuapp.com"
 
 const StringArt = () => {
 
@@ -16,6 +16,8 @@ const StringArt = () => {
     if(error) {
         return <div>Error</div>;
     }
+
+    const { string_art_circles, string_art_tessellations, string_art_dreamcatchers, string_art_mixed_media } = data.data.attributes
     
     return (
         <div>
@@ -37,7 +39,7 @@ const StringArt = () => {
                         <Card className="text-center">
                             
                                 <Card.Img className="img-fluid"  
-                                        src={BASE_URL + data.data.attributes.string_art_circles.data[1].attributes.url} 
+                                        src={string_art_circles.data[0].attributes.url} 
                                         alt={"test_photo"}/>
                                 <Card.ImgOverlay>
                                             <Button variant="danger" href="/circles">Circles
@@ -46,7 +48,7 @@ const StringArt = () => {
                         </Card>
                         <Card className="text-center">
                                 <Card.Img className="img-fluid"  
-                                        src={BASE_URL + data.data.attributes.string_art_dreamcatchers.data[1].attributes.url} 
+                                        src={string_art_dreamcatchers.data[0].attributes.url} 
                                         alt={"test_photo"}/>
                                 <Card.ImgOverlay>
                                             <Button variant="danger" href="/dreamcatchers">Dreamcatchers
@@ -59,7 +61,7 @@ const StringArt = () => {
                     <Col>
                     <Card className="text-center">
                                 <Card.Img className="img-fluid"  
-                                        src={BASE_URL + data.data.attributes.string_art_tessellations.data[1].attributes.url} 
+                                        src={string_art_tessellations.data[0].attributes.url} 
                                         alt={"test_photo"}/>
                                 <Card.ImgOverlay>
                                             <Button variant="danger" href="/tessellations">Tessellations
@@ -69,7 +71,7 @@ const StringArt = () => {
                         
                         <Card className="text-center">
                                 <Card.Img className="img-fluid"  
-                                        src={BASE_URL + data.data.attributes.string_art_mixed_media.data[1].attributes.url} 
+                                        src={string_art_mixed_media.data[0].attributes.url} 
                                         alt={"test_photo"}/>
                                 <Card.ImgOverlay>
                                             <Button variant="danger" href="/mixed">Mixed Media

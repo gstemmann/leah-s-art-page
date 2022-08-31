@@ -3,7 +3,7 @@ import useFetch from "../../hooks/useFetch";
 import { Row, Col, Container } from "react-bootstrap";
 
 
-const BASE_URL = 'http://localhost:1337'
+const BASE_URL = "https://lstemmann-art-page.herokuapp.com"
 
 
 const Tessellations = () => {
@@ -18,6 +18,8 @@ const Tessellations = () => {
         return <div>Error</div>;
     }
 
+    const { string_art_tessellations } = data.data.attributes
+
     return (
         <div>
             <div>
@@ -31,7 +33,7 @@ const Tessellations = () => {
                     <Col className="sm align-self-center" >
 
                     <img className="img-fluid rounded-circle" 
-                        src={BASE_URL + data.data.attributes.string_art_tessellations.data[9].attributes.url} 
+                        src={string_art_tessellations.data[9].attributes.url} 
                         alt="test_photo">
                         </img>
                     </Col>
@@ -53,57 +55,57 @@ const Tessellations = () => {
                 <Row className="p-5">
                         <Col>
                                 <img className="img-fluid" 
-                                src={BASE_URL + data.data.attributes.string_art_tessellations.data[0].attributes.url} 
+                                src={string_art_tessellations.data[0].attributes.url} 
                                 alt="test_photo">
                                 </img>
 
                                 <img className="img-fluid" 
-                                src={BASE_URL + data.data.attributes.string_art_tessellations.data[1].attributes.url} 
+                                src={string_art_tessellations.data[1].attributes.url} 
                                 alt="test_photo">
                                 </img>
 
                                 <img className="img-fluid" 
-                                src={BASE_URL + data.data.attributes.string_art_tessellations.data[2].attributes.url} 
+                                src={string_art_tessellations.data[2].attributes.url} 
                                 alt="test_photo">
                                 </img>
 
                                 <img className="img-fluid" 
-                                src={BASE_URL + data.data.attributes.string_art_tessellations.data[3].attributes.url} 
-                                alt="test_photo">
-                                </img>
-
-                      
-                                <img className="img-fluid" 
-                                src={BASE_URL + data.data.attributes.string_art_tessellations.data[4].attributes.url} 
-                                alt="test_photo">
-                                </img>
-                      
-                                <img className="img-fluid" 
-                                src={BASE_URL + data.data.attributes.string_art_tessellations.data[5].attributes.url} 
+                                src={string_art_tessellations.data[3].attributes.url} 
                                 alt="test_photo">
                                 </img>
 
                       
                                 <img className="img-fluid" 
-                                src={BASE_URL + data.data.attributes.string_art_tessellations.data[6].attributes.url} 
+                                src={string_art_tessellations.data[4].attributes.url} 
+                                alt="test_photo">
+                                </img>
+                      
+                                <img className="img-fluid" 
+                                src={string_art_tessellations.data[5].attributes.url} 
+                                alt="test_photo">
+                                </img>
+
+                      
+                                <img className="img-fluid" 
+                                src={string_art_tessellations.data[6].attributes.url} 
                                 alt="test_photo">
                                 </img>
 
                         
                                 <img className="img-fluid" 
-                                src={BASE_URL + data.data.attributes.string_art_tessellations.data[7].attributes.url} 
+                                src={string_art_tessellations.data[7].attributes.url} 
                                 alt="test_photo">
                                 </img>
 
                      
                                 <img className="img-fluid" 
-                                src={BASE_URL + data.data.attributes.string_art_tessellations.data[10].attributes.url} 
+                                src={string_art_tessellations.data[10].attributes.url} 
                                 alt="test_photo">
                                 </img>
 
 
                                 <img className="img-fluid" 
-                                src={BASE_URL + data.data.attributes.string_art_tessellations.data[11].attributes.url} 
+                                src={string_art_tessellations.data[11].attributes.url} 
                                 alt="test_photo">
                                 </img>
 

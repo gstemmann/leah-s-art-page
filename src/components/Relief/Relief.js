@@ -2,7 +2,7 @@ import React from "react";
 import useFetch from "../../hooks/useFetch";
 import { Row, Col, Container } from "react-bootstrap";
 
-const BASE_URL = 'http://localhost:1337'
+const BASE_URL = "https://lstemmann-art-page.herokuapp.com"
 
 const Relief = () => {
 
@@ -15,6 +15,8 @@ const Relief = () => {
     if(error) {
         return <div>Error</div>;
     }
+
+    const { prints_relief } = data.data.attributes
 
     return (
         <div>
@@ -30,22 +32,22 @@ const Relief = () => {
                 <Row className="p-5">
                         <Col>
                                 <img className="img-fluid" 
-                                src={BASE_URL + data.data.attributes.prints_relief.data[0].attributes.url} 
+                                src={prints_relief.data[0].attributes.url} 
                                 alt="test_photo">
                                 </img>
 
                                 <img className="img-fluid" 
-                                src={BASE_URL + data.data.attributes.prints_relief.data[1].attributes.url} 
+                                src={prints_relief.data[1].attributes.url} 
                                 alt="test_photo">
                                 </img>
 
                                 <img className="img-fluid" 
-                                src={BASE_URL + data.data.attributes.prints_relief.data[2].attributes.url} 
+                                src={prints_relief.data[2].attributes.url} 
                                 alt="test_photo">
                                 </img>
 
                                 <img className="img-fluid" 
-                                src={BASE_URL + data.data.attributes.prints_relief.data[3].attributes.url} 
+                                src={prints_relief.data[3].attributes.url} 
                                 alt="test_photo">
                                 </img>
 

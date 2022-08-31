@@ -3,7 +3,7 @@ import useFetch from "../../hooks/useFetch";
 import { Row, Col, Container, Button, Card } from "react-bootstrap";
 
 
-const BASE_URL = 'http://localhost:1337'
+const BASE_URL = "https://lstemmann-art-page.herokuapp.com"
 
 const TwoD = () => {
 
@@ -16,6 +16,8 @@ const TwoD = () => {
     if(error) {
         return <div>Error</div>;
     }
+
+    const { two_d_ink, two_d_water_color } = data.data.attributes
 
     return (
         
@@ -33,7 +35,7 @@ const TwoD = () => {
                     <Card className="text-center">
                            
                                 <Card.Img className="img-fluid"  
-                                        src={BASE_URL + data.data.attributes.two_d_ink.data[0].attributes.url} 
+                                        src={two_d_ink.data[0].attributes.url} 
                                         alt={"test_photo"}/>
                                 <Card.ImgOverlay>
                                             <Button variant="danger" href="/ink">Ink
@@ -46,7 +48,7 @@ const TwoD = () => {
                             <Card className="text-center">
                            
                                 <Card.Img className="img-fluid"  
-                                        src={BASE_URL + data.data.attributes.two_d_water_color.data[0].attributes.url} 
+                                        src={two_d_water_color.data[0].attributes.url} 
                                         alt={"test_photo"}/>
                                 <Card.ImgOverlay>
                                             <Button variant="danger" href="/watercolor">Water Color

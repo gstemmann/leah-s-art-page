@@ -3,7 +3,7 @@ import useFetch from "../../hooks/useFetch";
 import { Row, Col, Container } from "react-bootstrap";
 
 
-const BASE_URL = 'http://localhost:1337'
+const BASE_URL = "https://lstemmann-art-page.herokuapp.com"
 
 const Circles = () => {
     const { data, loading, error } = useFetch(`${BASE_URL}/api/image/?populate=%2A`);
@@ -16,6 +16,7 @@ const Circles = () => {
         return <div>Error</div>;
     }
 
+    const { string_art_circles } = data.data.attributes
 
     return (
         <div>
@@ -33,7 +34,7 @@ const Circles = () => {
                     </Col>
                     <Col>
                         <img className="rounded-circle img-fluid" 
-                        src={BASE_URL + data.data.attributes.string_art_circles.data[10].attributes.url} alt="first circle pic"></img>
+                        src={string_art_circles.data[10].attributes.url} alt="first circle pic"></img>
                     </Col>
                  
                 </Row>  
@@ -43,57 +44,57 @@ const Circles = () => {
                 <Row className="p-5">
                         <Col>
                                 <img className="img-fluid" 
-                                src={BASE_URL + data.data.attributes.string_art_circles.data[0].attributes.url} 
+                                src={string_art_circles.data[0].attributes.url} 
                                 alt="test_photo">
                                 </img>
 
                                 <img className="img-fluid" 
-                                src={BASE_URL + data.data.attributes.string_art_circles.data[1].attributes.url} 
+                                src={string_art_circles.data[1].attributes.url} 
                                 alt="test_photo">
                                 </img>
 
                                 <img className="img-fluid" 
-                                src={BASE_URL + data.data.attributes.string_art_circles.data[2].attributes.url} 
+                                src={string_art_circles.data[2].attributes.url} 
                                 alt="test_photo">
                                 </img>
 
                                 <img className="img-fluid" 
-                                src={BASE_URL + data.data.attributes.string_art_circles.data[3].attributes.url} 
-                                alt="test_photo">
-                                </img>
-
-                      
-                                <img className="img-fluid" 
-                                src={BASE_URL + data.data.attributes.string_art_circles.data[4].attributes.url} 
-                                alt="test_photo">
-                                </img>
-                      
-                                <img className="img-fluid" 
-                                src={BASE_URL + data.data.attributes.string_art_circles.data[5].attributes.url} 
+                                src={string_art_circles.data[3].attributes.url} 
                                 alt="test_photo">
                                 </img>
 
                       
                                 <img className="img-fluid" 
-                                src={BASE_URL + data.data.attributes.string_art_circles.data[6].attributes.url} 
+                                src={string_art_circles.data[4].attributes.url} 
+                                alt="test_photo">
+                                </img>
+                      
+                                <img className="img-fluid" 
+                                src={string_art_circles.data[5].attributes.url} 
+                                alt="test_photo">
+                                </img>
+
+                      
+                                <img className="img-fluid" 
+                                src={string_art_circles.data[6].attributes.url} 
                                 alt="test_photo">
                                 </img>
 
                         
                                 <img className="img-fluid" 
-                                src={BASE_URL + data.data.attributes.string_art_circles.data[7].attributes.url} 
+                                src={string_art_circles.data[7].attributes.url} 
                                 alt="test_photo">
                                 </img>
 
                      
                                 <img className="img-fluid" 
-                                src={BASE_URL + data.data.attributes.string_art_circles.data[8].attributes.url} 
+                                src={string_art_circles.data[8].attributes.url} 
                                 alt="test_photo">
                                 </img>
 
                        
                                 <img className="img-fluid" 
-                                src={BASE_URL + data.data.attributes.string_art_circles.data[9].attributes.url} 
+                                src={string_art_circles.data[9].attributes.url} 
                                 alt="test_photo">
                                 </img>
 

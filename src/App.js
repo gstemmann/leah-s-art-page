@@ -23,7 +23,7 @@ import Contact from "./components/Contact/Contact";
 import CV from "./components/CV/CV";
 
 import NavBar from "./components/NavBar/NavBar";
-import Footer from "./components/Footer/Footer";
+// import Footer from "./components/Footer/Footer";
 // import { Nav } from "react-bootstrap";
 
 

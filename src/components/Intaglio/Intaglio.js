@@ -2,7 +2,7 @@ import React from "react";
 import useFetch from "../../hooks/useFetch";
 import { Row, Col, Container } from "react-bootstrap";
 
-const BASE_URL = 'http://localhost:1337'
+const BASE_URL = "https://lstemmann-art-page.herokuapp.com"
 
 const Intaglio = () => {
 
@@ -16,6 +16,8 @@ const Intaglio = () => {
     if(error) {
         return <div>Error</div>;
     }
+
+    const { prints_intaglio } = data.data.attributes
 
     return (
         <div>
@@ -31,32 +33,32 @@ const Intaglio = () => {
                 <Row className="p-5">
                         <Col>
                                 <img className="img-fluid" 
-                                src={BASE_URL + data.data.attributes.prints_intaglio.data[0].attributes.url} 
+                                src={prints_intaglio.data[0].attributes.url} 
                                 alt="test_photo">
                                 </img>
 
                                 <img className="img-fluid" 
-                                src={BASE_URL + data.data.attributes.prints_intaglio.data[1].attributes.url} 
+                                src={prints_intaglio.data[1].attributes.url} 
                                 alt="test_photo">
                                 </img>
 
                                 <img className="img-fluid" 
-                                src={BASE_URL + data.data.attributes.prints_intaglio.data[2].attributes.url} 
+                                src={prints_intaglio.data[2].attributes.url} 
                                 alt="test_photo">
                                 </img>
 
                                 <img className="img-fluid" 
-                                src={BASE_URL + data.data.attributes.prints_intaglio.data[3].attributes.url} 
+                                src={prints_intaglio.data[3].attributes.url} 
                                 alt="test_photo">
                                 </img>
 
                                 <img className="img-fluid" 
-                                src={BASE_URL + data.data.attributes.prints_intaglio.data[4].attributes.url} 
+                                src={prints_intaglio.data[4].attributes.url} 
                                 alt="test_photo">
                                 </img>
 
                                 <img className="img-fluid" 
-                                src={BASE_URL + data.data.attributes.prints_intaglio.data[5].attributes.url} 
+                                src={prints_intaglio.data[5].attributes.url} 
                                 alt="test_photo">
                                 </img>
 

@@ -2,7 +2,7 @@ import React from "react";
 import useFetch from "../../hooks/useFetch";
 import { Row, Col, Container } from "react-bootstrap";
 
-const BASE_URL = 'http://localhost:1337'
+const BASE_URL = "https://lstemmann-art-page.herokuapp.com"
 
 const Lithographs = () => {
 
@@ -16,6 +16,8 @@ const Lithographs = () => {
     if(error) {
         return <div>Error</div>;
     }
+
+    const { prints_lithographs } = data.data.attributes
 
     return (
         <div>
@@ -31,17 +33,17 @@ const Lithographs = () => {
                 <Row className="p-5">
                         <Col>
                                 <img className="img-fluid" 
-                                src={BASE_URL + data.data.attributes.prints_lithographs.data[0].attributes.url} 
+                                src={prints_lithographs.data[0].attributes.url} 
                                 alt="test_photo">
                                 </img>
 
                                 <img className="img-fluid" 
-                                src={BASE_URL + data.data.attributes.prints_lithographs.data[1].attributes.url} 
+                                src={prints_lithographs.data[1].attributes.url} 
                                 alt="test_photo">
                                 </img>
 
                                 <img className="img-fluid" 
-                                src={BASE_URL + data.data.attributes.prints_lithographs.data[2].attributes.url} 
+                                src={prints_lithographs.data[2].attributes.url} 
                                 alt="test_photo">
                                 </img>
 

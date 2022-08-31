@@ -3,7 +3,7 @@ import useFetch from "../../hooks/useFetch";
 import { Row, Col, Container, Button, Card } from "react-bootstrap";
 
 
-const BASE_URL = 'http://localhost:1337'
+const BASE_URL = "https://lstemmann-art-page.herokuapp.com"
 
 const Printmaking = () => {
 
@@ -17,6 +17,8 @@ const Printmaking = () => {
         return <div>Error</div>;
     }
 
+    const { prints_relief, prints_leaf, prints_intaglio, prints_lithographs } = data.data.attributes
+
     return (
         <div>
             <Container>
@@ -25,7 +27,7 @@ const Printmaking = () => {
                     <Card className="text-center">
                            
                            <Card.Img className="img-fluid"  
-                                   src={BASE_URL + data.data.attributes.prints_relief.data[0].attributes.url} 
+                                   src={prints_relief.data[0].attributes.url} 
                                    alt={"test_photo"}/>
                            <Card.ImgOverlay>
                                        <Button variant="danger" href="/relief">Relief
@@ -37,7 +39,7 @@ const Printmaking = () => {
                        <Card className="text-center">
                            
                            <Card.Img className="img-fluid"  
-                                   src={BASE_URL + data.data.attributes.prints_leaf.data[0].attributes.url} 
+                                   src={prints_leaf.data[0].attributes.url} 
                                    alt={"test_photo"}/>
                            <Card.ImgOverlay>
                                        <Button variant="danger" href="/leafprints">Leaf Prints
@@ -53,7 +55,7 @@ const Printmaking = () => {
                         <Card className="text-center">
                            
                                 <Card.Img className="img-fluid"  
-                                        src={BASE_URL + data.data.attributes.prints_intaglio.data[1].attributes.url} 
+                                        src={prints_intaglio.data[0].attributes.url} 
                                         alt={"test_photo"}/>
                                 <Card.ImgOverlay>
                                             <Button variant="danger" href="/intaglio">Intaglio
@@ -65,7 +67,7 @@ const Printmaking = () => {
                             <Card className="text-center">
                            
                            <Card.Img className="img-fluid"  
-                                   src={BASE_URL + data.data.attributes.prints_lithographs.data[0].attributes.url} 
+                                   src={prints_lithographs.data[0].attributes.url} 
                                    alt={"test_photo"}/>
                            <Card.ImgOverlay>
                                        <Button variant="danger" href="/lithographs">Lithographs
