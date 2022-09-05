@@ -1,7 +1,7 @@
 import React from "react";
 import useFetch from "../../hooks/useFetch";
-import { Row, Col, Container } from "react-bootstrap";
-
+import { Row, Col, Container, Card } from "react-bootstrap";
+// import "./Circles.css";
 
 const BASE_URL = "https://lstemmann-art-page.herokuapp.com"
 
@@ -43,11 +43,23 @@ const Circles = () => {
             <Container className="container-fluid">
                 <Row className="p-5">
                         <Col>
-                                <img className="img-fluid" 
-                                src={string_art_circles.data[0].attributes.url} 
-                                alt="test_photo">
-                                </img>
+                            <Card className="text-center" border="light">
+                                <Card.Img
+                                            src={string_art_circles.data[0].attributes.url} 
+                                            alt="test_photo">
+                                </Card.Img>
+                                <p>
+                                    <strong style={{color: "black"}}>White Lotus
+                                    </strong>
+                                </p>
+                                
+                                <p><span>1 x 1'</span></p>
+                                <p><span>2021</span></p>
+                                <p><span>250 usd</span></p>
 
+                            </Card>
+
+                            
                                 <img className="img-fluid" 
                                 src={string_art_circles.data[1].attributes.url} 
                                 alt="test_photo">

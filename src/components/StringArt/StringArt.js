@@ -22,29 +22,28 @@ const StringArt = () => {
     return (
         <div>
             <Container className="text-end">
-            <h1>StringArt</h1>   
-                <p>
-                    Leah began making string art in 2016. 
-                    What started out as a fun hobby with friends has grown into a true labor of love.
-                    below you will notice four different categories of string art. 
-                    Click on them to learn more about what makes them distinct.
-                </p>
-                <br></br>
-                <br></br>
-                <br></br>
+                <h1>StringArt</h1>   
+                    <p>
+                        Leah began making string art in 2016. 
+                        What started out as a fun hobby with friends has grown into a true labor of love.
+                        below you will notice four different categories of string art. 
+                        Click on them to learn more about what makes them distinct.
+                    </p>
+                    <br></br>
+                    <br></br>
+                    <br></br>
             </Container>
-        <Container className="container-fluid">
+            <Container>
                 <Row>
                     <Col>
-                        <Card className="text-center">
-                            
-                                <Card.Img className="img-fluid"  
-                                        src={string_art_circles.data[0].attributes.url} 
-                                        alt={"test_photo"}/>
-                                <Card.ImgOverlay>
-                                            <Button variant="danger" href="/circles">Circles
-                                            </Button>
-                                </Card.ImgOverlay>
+                        <Card className="text-center"> 
+                            <Card.Img className="img-fluid"  
+                                    src={string_art_circles.data[1].attributes.url} 
+                                    alt={"test_photo"}/>
+                            <Card.ImgOverlay>
+                                        <Button variant="danger" href="/circles">Circles
+                                        </Button>
+                            </Card.ImgOverlay>
                         </Card>
                         <Card className="text-center">
                                 <Card.Img className="img-fluid"  
@@ -57,9 +56,8 @@ const StringArt = () => {
                         </Card>
                     </Col>
 
-
                     <Col>
-                    <Card className="text-center">
+                        <Card className="text-center">
                                 <Card.Img className="img-fluid"  
                                         src={string_art_tessellations.data[0].attributes.url} 
                                         alt={"test_photo"}/>
@@ -70,17 +68,16 @@ const StringArt = () => {
                         </Card>
                         
                         <Card className="text-center">
-                                <Card.Img className="img-fluid"  
-                                        src={string_art_mixed_media.data[0].attributes.url} 
-                                        alt={"test_photo"}/>
-                                <Card.ImgOverlay>
-                                            <Button variant="danger" href="/mixed">Mixed Media
-                                            </Button>
-                                </Card.ImgOverlay>
+                            <Card.Img className="img-fluid"  
+                                    src={string_art_mixed_media.data[7].attributes.url} 
+                                    alt={"test_photo"}/>
+                            <Card.ImgOverlay>
+                                        <Button variant="danger" href="/mixed">Mixed Media
+                                        </Button>
+                            </Card.ImgOverlay>
                         </Card>
                     </Col>
-                </Row>
-                
+                </Row>  
             </Container>
         </div>
     );

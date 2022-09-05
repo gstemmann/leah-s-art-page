@@ -19,7 +19,13 @@ const About = () => {
 
     return (
         <div>
-        <h1>about</h1>
+        <Container className="container-fluid text-center">
+                <Row className="p-5">
+                    <Col className="align-self-left">
+                        <h1>about</h1>
+                    </Col>
+                </Row>
+            </Container>
         <Container className="container-fluid">
             <Row className="p-5">
                 <Col className="align-self-left">

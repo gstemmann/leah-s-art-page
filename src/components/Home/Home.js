@@ -1,7 +1,7 @@
 import React from "react";
 import useFetch from "../../hooks/useFetch";
 import { Row, Col, Container, Button, Card } from "react-bootstrap";
-import home_photo from "../../assets/images/Home/home_photo.webp";
+import './Home.css';
 
 
 
@@ -21,8 +21,7 @@ const Home = () => {
         return <div>Error</div>;
     }
 
-    const { string_art_circles, prints_relief, two_d_ink } = data.data.attributes
-    console.log(string_art_circles)   
+    const { string_art_tessellations, prints_relief, two_d_ink, string_art_circles } = data.data.attributes   
     
     return (
         
@@ -30,67 +29,66 @@ const Home = () => {
         <div>
             <Row className="p-5" >
                 <Col className="text-center">
-                    <img className="img-fluid"  src={home_photo} alt={"test_photo"}/>
+                    <Card>
+                        <Card.Img
+                            className="card-img-top img-fluid"  
+                            src={string_art_circles.data[2].attributes.url} 
+                            alt={"home_photo"}/>
+                    </Card>
                 </Col>
                 <Col className="align-self-center">
                     <p>
-                        Leah is a multidisciplinary artist from Southern California.  
-                        She experiments with a range of media and styles: 
-                        from heavily-geometric tessellations, to organic, free-flowing watercolors.  
-                        Her most recent work involves stain-painting on wood and  incorporating hardware on the surface, such as nails and string.  
-                        These creations explore the harmonious and dissonant intersections between our natural and industrial world.
+                        Leah Stemmann  is an American multidisciplinary artist from Southern California.  
+                        She experiments with a range of media and styles, 
+                        from geometric tessellations to free-flowing watercolors.  
+                        Her most recent work involves painting on wood with stain, and combining hardware on the surface, such as nails and string.  
+                        Her creations explore the harmonious -yet dissonant -intersections between our natural and industrial world.
                     </p>
                 </Col>
             </Row>
 
-            <Container className="container-fluid">
-                <Row className="p-5">
-                        <Col>
-                            <Card className="text-center">
-                           
-                                <Card.Img className="img-fluid"  
-                                        src={string_art_circles.data[0].attributes.url} 
-                                        alt={"test_photo"}/>
-                                <Card.ImgOverlay>
-                                            <Button variant="danger" href="/string">StringArt
-                                            </Button>
-                                </Card.ImgOverlay>
-                                
-                            </Card>
-                        </Col>
-
-
-                        <Col>
-                            <Card className="text-center">
-                           
-                                <Card.Img className="img-fluid"  
-                                        src={prints_relief.data[3].attributes.url} 
-                                        alt={"test_photo"}/>
-                                <Card.ImgOverlay>
-                                            <Button variant="danger" href="/prints">Printmaking
-                                            </Button>
-                                </Card.ImgOverlay>
-                                
-                            </Card>
-                        </Col>
-
-
-                        <Col>
-                            <Card className="text-center">
-                           
-                                <Card.Img className="img-fluid"  
-                                        src={two_d_ink.data[1].attributes.url} 
-                                        alt={"test_photo"}/>
-                                <Card.ImgOverlay>
-                                            <Button variant="danger" href="/twoD">2D
-                                            </Button>
-                                </Card.ImgOverlay>
-                                
-                            </Card>
-                        </Col>
-
-                </Row>
+            <Container>
                 
+                    <Row className="p-5">
+                    
+                            <Col>
+                                <Card className="text-center">
+                                    <Card.Img className="card-img-top img-fluid"
+                                            src={string_art_tessellations.data[0].attributes.url} 
+                                            alt={"test_photo"}/>
+                                    <Card.ImgOverlay>
+                                                <Button variant="danger" href="/string">StringArt
+                                                </Button>
+                                    </Card.ImgOverlay>  
+                                </Card>
+                            </Col>
+
+
+                            <Col>
+                                <Card className="text-center">
+                                    <Card.Img className="card-img-top img-fluid"  
+                                            src={prints_relief.data[0].attributes.url} 
+                                            alt={"test_photo"}/>
+                                    <Card.ImgOverlay>
+                                                <Button variant="danger" href="/prints">Printmaking
+                                                </Button>
+                                    </Card.ImgOverlay>  
+                                </Card>
+                            </Col>
+
+
+                            <Col>
+                                <Card className="text-center">
+                                    <Card.Img className="card-img-top img-fluid"  
+                                            src={two_d_ink.data[0].attributes.url} 
+                                            alt={"test_photo"}/>
+                                    <Card.ImgOverlay>
+                                                <Button variant="danger" href="/twoD">2D
+                                                </Button>
+                                    </Card.ImgOverlay>
+                                </Card>
+                            </Col>
+                    </Row>
             </Container>
         
         </div>

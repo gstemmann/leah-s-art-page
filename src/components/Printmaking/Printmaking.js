@@ -24,56 +24,45 @@ const Printmaking = () => {
             <Container>
                 <Row>
                     <Col>
-                    <Card className="text-center">
-                           
-                           <Card.Img className="img-fluid"  
-                                   src={prints_relief.data[0].attributes.url} 
-                                   alt={"test_photo"}/>
-                           <Card.ImgOverlay>
-                                       <Button variant="danger" href="/relief">Relief
-                                       </Button>
-                           </Card.ImgOverlay>
-                           
-                       </Card>
-
-                       <Card className="text-center">
-                           
-                           <Card.Img className="img-fluid"  
-                                   src={prints_leaf.data[0].attributes.url} 
-                                   alt={"test_photo"}/>
-                           <Card.ImgOverlay>
-                                       <Button variant="danger" href="/leafprints">Leaf Prints
-                                       </Button>
-                           </Card.ImgOverlay>
-                           
-                       </Card>
-                    
-                        
-                        </Col>
-
-                        <Col>
                         <Card className="text-center">
-                           
+                            <Card.Img className="img-fluid"  
+                                    src={prints_relief.data[0].attributes.url} 
+                                    alt={"test_photo"}/>
+                            <Card.ImgOverlay>
+                                        <Button variant="danger" href="/relief">Relief
+                                        </Button>
+                            </Card.ImgOverlay>
+                        </Card>
+                        <Card className="text-center">
+                            <Card.Img className="img-fluid"  
+                                    src={prints_leaf.data[0].attributes.url} 
+                                    alt={"test_photo"}/>
+                            <Card.ImgOverlay>
+                                        <Button variant="danger" href="/leafprints">Leaf Prints
+                                        </Button>
+                            </Card.ImgOverlay> 
+                        </Card>    
+                    </Col>
+
+                    <Col>
+                        <Card className="text-center">
                                 <Card.Img className="img-fluid"  
                                         src={prints_intaglio.data[0].attributes.url} 
                                         alt={"test_photo"}/>
                                 <Card.ImgOverlay>
                                             <Button variant="danger" href="/intaglio">Intaglio
                                             </Button>
-                                </Card.ImgOverlay>
-                                
+                                </Card.ImgOverlay>   
                             </Card>
                         
-                            <Card className="text-center">
-                           
-                           <Card.Img className="img-fluid"  
-                                   src={prints_lithographs.data[0].attributes.url} 
-                                   alt={"test_photo"}/>
-                           <Card.ImgOverlay>
-                                       <Button variant="danger" href="/lithographs">Lithographs
-                                       </Button>
-                           </Card.ImgOverlay>
-                           
+                        <Card className="text-center">
+                            <Card.Img className="img-fluid"  
+                                    src={prints_lithographs.data[0].attributes.url} 
+                                    alt={"test_photo"}/>
+                            <Card.ImgOverlay>
+                                        <Button variant="danger" href="/lithographs">Lithographs
+                                        </Button>
+                            </Card.ImgOverlay>
                        </Card>
                     </Col>
                 </Row>

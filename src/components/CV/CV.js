@@ -1,13 +1,21 @@
 import React from "react";
+import { Row, Col, Container } from "react-bootstrap";
 
 
 const CV = () => {
     return (
         <div>
-            <h1> curriculum vitae </h1>
-            <br></br>
-           
-            <h1> MCLAREN AUTOMOTIVE PHOTO OP</h1>
+            <Container className="container-fluid text-center">
+                <Row className="p-5">
+                    <Col className="align-self-left">
+                        <h1>curriculum vitae</h1>
+                    </Col>
+                </Row>
+            </Container>
+            <Container>
+                <Row className="p-5">
+                    <Col className="text-left">
+                    <h1> MCLAREN AUTOMOTIVE PHOTO OP</h1>
                 <br></br>
                 <p>String art installation: photo op piece for  Car Week in Carmel, CA
 
@@ -109,6 +117,11 @@ const CV = () => {
 
                     2014</p>
                 <br></br>
+                    </Col>
+                </Row>
+            </Container>
+           
+       
             
         </div>
     );

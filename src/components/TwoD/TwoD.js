@@ -1,6 +1,7 @@
 import React from "react";
 import useFetch from "../../hooks/useFetch";
 import { Row, Col, Container, Button, Card } from "react-bootstrap";
+import './TwoD.css';
 
 
 const BASE_URL = "https://lstemmann-art-page.herokuapp.com"
@@ -34,7 +35,7 @@ const TwoD = () => {
                     <Col>
                     <Card className="text-center">
                            
-                                <Card.Img className="img-fluid"  
+                                <Card.Img className="card-img-top img-fluid"  
                                         src={two_d_ink.data[0].attributes.url} 
                                         alt={"test_photo"}/>
                                 <Card.ImgOverlay>
@@ -47,7 +48,7 @@ const TwoD = () => {
                     <Col>
                             <Card className="text-center">
                            
-                                <Card.Img className="img-fluid"  
+                                <Card.Img className="card-img-top img-fluid"  
                                         src={two_d_water_color.data[0].attributes.url} 
                                         alt={"test_photo"}/>
                                 <Card.ImgOverlay>
