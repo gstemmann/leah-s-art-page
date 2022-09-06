@@ -12,7 +12,7 @@ const BASE_URL = "https://lstemmann-art-page.herokuapp.com"
 const Home = () => {
 
     const { data, loading, error } = useFetch(`${BASE_URL}/api/image/?populate=%2A`);
-    // console.log(data)
+    console.log(data)
 
     if (loading) {
         return <div>Loading...</div>;
@@ -50,45 +50,45 @@ const Home = () => {
             <Container>
                 
                     <Row className="p-5">
-                    
-                            <Col>
+                            <Col xs={12} md={4}>
                                 <Card className="text-center">
                                     <Card.Img className="card-img-top img-fluid"
-                                            src={string_art_tessellations.data[0].attributes.url} 
+                                            src={string_art_tessellations.data[10].attributes.url} 
                                             alt={"test_photo"}/>
                                     <Card.ImgOverlay>
-                                                <Button variant="danger" href="/string">StringArt
+                                                <Button size="sm" variant="danger" href="/string">StringArt
                                                 </Button>
                                     </Card.ImgOverlay>  
                                 </Card>
                             </Col>
 
 
-                            <Col>
+                            <Col xs={12} md={4}>
                                 <Card className="text-center">
                                     <Card.Img className="card-img-top img-fluid"  
                                             src={prints_relief.data[0].attributes.url} 
                                             alt={"test_photo"}/>
                                     <Card.ImgOverlay>
-                                                <Button variant="danger" href="/prints">Printmaking
+                                                <Button size="sm" variant="danger" href="/prints">Printmaking
                                                 </Button>
                                     </Card.ImgOverlay>  
                                 </Card>
                             </Col>
 
 
-                            <Col>
+                            <Col xs={12} md={4}>
                                 <Card className="text-center">
                                     <Card.Img className="card-img-top img-fluid"  
                                             src={two_d_ink.data[0].attributes.url} 
                                             alt={"test_photo"}/>
                                     <Card.ImgOverlay>
-                                                <Button variant="danger" href="/twoD">2D
+                                                <Button size="sm" variant="danger" href="/twoD">2D
                                                 </Button>
                                     </Card.ImgOverlay>
                                 </Card>
                             </Col>
-                    </Row>
+                        </Row>
+                    
             </Container>
         
         </div>
