@@ -5,9 +5,10 @@ Live Link: <p align="center">
   <a href="https://lstemmann.surge.sh/"> Leah Stemmann's art page 
   </a>
   <br></br>
-  <img src="https://stringsinthetimeaftertime.s3.us-west-1.amazonaws.com/small_radiation_0605c76b6c.webp">
-  <img src="https://stringsinthetimeaftertime.s3.us-west-1.amazonaws.com/small_radiation_0605c76b6c.webp">
-  <img src="https://stringsinthetimeaftertime.s3.us-west-1.amazonaws.com/small_radiation_0605c76b6c.webp">
+  <img src="https://stringsinthetimeaftertime.s3.us-west-1.amazonaws.com/thumbnail_radiation_0605c76b6c.webp">
+  <img src="https://stringsinthetimeaftertime.s3.us-west-1.amazonaws.com/thumbnail_radiation_0605c76b6c.webp">
+  <img src="https://stringsinthetimeaftertime.s3.us-west-1.amazonaws.com/thumbnail_radiation_0605c76b6c.webp">
+  <img src="https://stringsinthetimeaftertime.s3.us-west-1.amazonaws.com/thumbnail_radiation_0605c76b6c.webp">
 </p>
 
 ### **Tools Used**
