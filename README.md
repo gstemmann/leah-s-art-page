@@ -2,7 +2,7 @@ Leah Stemmann's art page is an Artist's Portflio where the artist can show off t
 
 Live Link: <p align="center">
 
-  <a href="https://lstemmann.surge.sh/" target="_blank">
+  <a href="https://lstemmann.surge.sh/"> Leah Stemmann's art page 
   </a>
 </p>
 
