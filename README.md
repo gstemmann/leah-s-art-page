@@ -10,7 +10,7 @@ Live Link: <p align="center">
   <img src="https://stringsinthetimeaftertime.s3.us-west-1.amazonaws.com/thumbnail_pachinko_a74599b3da.webp">
   <img src="https://stringsinthetimeaftertime.s3.us-west-1.amazonaws.com/thumbnail_simply_orange_9770a1bae7.webp">
   <img src="https://stringsinthetimeaftertime.s3.us-west-1.amazonaws.com/thumbnail_two_forms_of_time_dark_bce20de6e5.webp">
-  <img src="https://stringsinthetimeaftertime.s3.us-west-1.amazonaws.com/thumbnail_sherry_1f98c56ea2.webp">
+  <img src="https://stringsinthetimeaftertime.s3.us-west-1.amazonaws.com/thumbnail_raspberry_3161d7e337.webp">
 </p>
 
 ### **Tools Used**
