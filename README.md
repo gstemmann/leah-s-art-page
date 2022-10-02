@@ -1,3 +1,15 @@
+Leah Stemmann's art page is an Artist's Portflio where the artist can show off their work including make any updates to the site at will.
+
+Live Link: <p align="center">
+
+  <a href="https://lstemmann.surge.sh/" target="_blank">
+    <img height="70" src="https://stringsinthetimeaftertime.s3.us-west-1.amazonaws.com/radiation_0605c76b6c.webp"/>
+  </a>
+</p>
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
