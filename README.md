@@ -6,9 +6,9 @@ Live Link: <p align="center">
   </a>
   <br></br>
   <img src="https://stringsinthetimeaftertime.s3.us-west-1.amazonaws.com/thumbnail_radiation_0605c76b6c.webp">
-  <img src="https://stringsinthetimeaftertime.s3.us-west-1.amazonaws.com/thumbnail_radiation_0605c76b6c.webp">
-  <img src="https://stringsinthetimeaftertime.s3.us-west-1.amazonaws.com/thumbnail_radiation_0605c76b6c.webp">
-  <img src="https://stringsinthetimeaftertime.s3.us-west-1.amazonaws.com/thumbnail_radiation_0605c76b6c.webp">
+  <img src="https://stringsinthetimeaftertime.s3.us-west-1.amazonaws.com/thumbnail_sitting_in_a_room_d8f47ef1b1.webp">
+  <img src="https://stringsinthetimeaftertime.s3.us-west-1.amazonaws.com/thumbnail_pachinko_a74599b3da.webp">
+  <img src="https://stringsinthetimeaftertime.s3.us-west-1.amazonaws.com/thumbnail_two_forms_of_time_dark_bce20de6e5.webp">
 </p>
 
 ### **Tools Used**
