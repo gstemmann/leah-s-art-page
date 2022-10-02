@@ -6,10 +6,31 @@ Live Link: <p align="center">
   </a>
 </p>
 
+### **Tools Used**
+
+This application makes use of the Strapi Headless CMS for User Administration and general site maintenance. The front end utilizes React.js library and makes API requests to endpoints set up with Strapi. The site also utilizes Amazon Web Service to maintain photos live in production.
+
+Other Tools
+
+- Postgresql
+- Heroku
+- React-Bootstrap
+- Axios
+- PGAdmin
+- AWS S3
+
+---
+
+### **User Flow**
+
+The site comes with an admin dashboard that is completely hidden from users unless the admin priveleges are given and authenitcated. The admin dashboard is fully functional with photo upload functionality with photos hosted on AWS S3. The admin can also easily assign roles to other users to allow create, read, update and delete website components. The entire database is in production hosted on heroku using Postgresql. 
 
 
 
-# Getting Started with Create React App
+
+
+
+# Getting Started with Create React App 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
